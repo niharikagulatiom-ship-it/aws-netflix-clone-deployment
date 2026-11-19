@@ -1,1 +1,217 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #141414;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 5%;
+            background: #080808;
+        }
+
+        .logo {
+            color: #e50914;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .signin {
+            background: #e50914;
+            padding: 9px 18px;
+            border-radius: 4px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 480px;
+            padding: 120px 5%;
+            background:
+                linear-gradient(to right, #000 15%, transparent),
+                linear-gradient(to top, #141414, transparent),
+                url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600')
+                center/cover;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 500px;
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .play {
+            background: white;
+            color: black;
+        }
+
+        .info {
+            background: #555;
+            color: white;
+        }
+
+        /* Movies Section */
+        .movies {
+            padding: 25px 5%;
+        }
+
+        .movies h2 {
+            margin-bottom: 18px;
+        }
+
+        .movie-row {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding-bottom: 15px;
+        }
+
+        .movie {
+            min-width: 180px;
+            height: 250px;
+            border-radius: 7px;
+            display: flex;
+            align-items: end;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.3s;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .movie:hover {
+            transform: scale(1.07);
+        }
+
+        .movie:nth-child(1) {
+            background: linear-gradient(transparent, #000), #702020;
+        }
+
+        .movie:nth-child(2) {
+            background: linear-gradient(transparent, #000), #183d61;
+        }
+
+        .movie:nth-child(3) {
+            background: linear-gradient(transparent, #000), #625025;
+        }
+
+        .movie:nth-child(4) {
+            background: linear-gradient(transparent, #000), #39205d;
+        }
+
+        .movie:nth-child(5) {
+            background: linear-gradient(transparent, #000), #174d40;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px;
+            color: #888;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">NETFLIX</div>
+
+        <div>
+            <a href="#">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Movies</a>
+            <a href="#">My List</a>
+            <a href="#" class="signin">Sign In</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Unlimited Movies,<br>TV Shows & More.</h1>
+
+        <p>
+            Enjoy the latest movies, trending shows
+            and exciting entertainment.
+            Watch anytime, anywhere.
+        </p>
+
+        <button class="play">▶ Play</button>
+        <button class="info">More Info</button>
+    </section>
+
+    <!-- Trending Movies -->
+    <section class="movies">
+        <h2>Trending Now</h2>
+
+        <div class="movie-row">
+            <div class="movie">Action</div>
+            <div class="movie">Adventure</div>
+            <div class="movie">Drama</div>
+            <div class="movie">Thriller</div>
+            <div class="movie">Mystery</div>
+        </div>
+    </section>
+
+    <!-- Popular Shows -->
+    <section class="movies">
+        <h2>Popular on Netflix</h2>
+
+        <div class="movie-row">
+            <div class="movie">Series 01</div>
+            <div class="movie">Series 02</div>
+            <div class="movie">Series 03</div>
+            <div class="movie">Series 04</div>
+            <div class="movie">Series 05</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Netflix Clone Project | Created for AWS Deployment</p>
+        <p>Hosted on AWS</p>
+    </footer>
+
+</body>
+</html>
+
